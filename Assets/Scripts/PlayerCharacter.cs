@@ -35,9 +35,11 @@ public class PlayerCharacter : Character
     // Energy costs for each action
     private int[] actionEnergyCosts;
 
-    protected override void Start()
+    /// <summary>
+    /// Initialize the energy costs array
+    /// </summary>
+    private void InitializeEnergyCosts()
     {
-        base.Start();
         actionEnergyCosts = new int[]
         {
             quickAttackEnergyCost,
@@ -45,6 +47,12 @@ public class PlayerCharacter : Character
             defendEnergyCost,
             poisonStrikeEnergyCost
         };
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+        InitializeEnergyCosts();
     }
 
     /// <summary>
@@ -138,16 +146,10 @@ public class PlayerCharacter : Character
 
     public override int GetActionEnergyCost(int actionIndex)
     {
-        if (actionEnergyCosts == null || actionEnergyCosts.Length == 0)
+        // Ensure initialization if accessed before Start
+        if (actionEnergyCosts == null)
         {
-            // Initialize if not done in Start
-            actionEnergyCosts = new int[]
-            {
-                quickAttackEnergyCost,
-                heavyAttackEnergyCost,
-                defendEnergyCost,
-                poisonStrikeEnergyCost
-            };
+            InitializeEnergyCosts();
         }
         
         if (actionIndex >= 0 && actionIndex < actionEnergyCosts.Length)

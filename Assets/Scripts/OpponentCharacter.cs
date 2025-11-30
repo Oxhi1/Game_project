@@ -41,9 +41,11 @@ public class OpponentCharacter : Character
     // Reference to AI controller (can be extended in the future)
     private OpponentAI aiController;
 
-    protected override void Start()
+    /// <summary>
+    /// Initialize the energy costs array
+    /// </summary>
+    private void InitializeEnergyCosts()
     {
-        base.Start();
         actionEnergyCosts = new int[]
         {
             slashEnergyCost,
@@ -51,6 +53,12 @@ public class OpponentCharacter : Character
             guardEnergyCost,
             lifeDrainEnergyCost
         };
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+        InitializeEnergyCosts();
 
         // Initialize AI controller
         aiController = GetComponent<OpponentAI>();
@@ -169,16 +177,10 @@ public class OpponentCharacter : Character
 
     public override int GetActionEnergyCost(int actionIndex)
     {
-        if (actionEnergyCosts == null || actionEnergyCosts.Length == 0)
+        // Ensure initialization if accessed before Start
+        if (actionEnergyCosts == null)
         {
-            // Initialize if not done in Start
-            actionEnergyCosts = new int[]
-            {
-                slashEnergyCost,
-                powerSlamEnergyCost,
-                guardEnergyCost,
-                lifeDrainEnergyCost
-            };
+            InitializeEnergyCosts();
         }
         
         if (actionIndex >= 0 && actionIndex < actionEnergyCosts.Length)
