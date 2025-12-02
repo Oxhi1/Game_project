@@ -1,15 +1,15 @@
 # Kart Savaşı - Unity Oyun Projesi
 
-## 🎮 Oyun Hakkında
+##  Oyun Hakkında
 
 Kart Savaşı, Unity ile geliştirilmiş sıra tabanlı bir strateji oyunudur. Oyuncu ve rakip karakter arasında gerçekleşen taktiksel savaşları içerir. Her karakterin 4 benzersiz aksiyonu vardır ve bu aksiyonlar birbirini etkiler.
 
-### 🔗 Oyun Bağlantısı
+###  Oyun Bağlantısı
 **[Oyunu Oynamak İçin Tıklayın](https://oxhi1.itch.io/kart-savasi)** *(WebGL Build - Tarayıcıda Oynanabilir)*
 
 ---
 
-## 📋 Özellikler
+##  Özellikler
 
 ### Oyuncu Aksiyonları (4 Adet)
 1. **Hızlı Saldırı** - Düşük hasar, düşük enerji maliyeti (10 hasar, 10 enerji)
@@ -30,14 +30,14 @@ Kart Savaşı, Unity ile geliştirilmiş sıra tabanlı bir strateji oyunudur. O
 - ✅ Oyundan çıkış butonu
 
 ### Yapay Zeka Sistemi
-- ⚡ Kural tabanlı AI (Makine öğrenmesi gerektirmez)
-- 🎯 Stratejik karar mekanizması
-- 🔧 Gelecekte AI genişletme için hazır altyapı
-- 📊 Zorluk seviyeleri için parametreler (Kolay, Normal, Zor)
+-  Kural tabanlı AI (Makine öğrenmesi gerektirmez)
+-  Stratejik karar mekanizması
+-  Gelecekte AI genişletme için hazır altyapı
+-  Zorluk seviyeleri için parametreler (Kolay, Normal, Zor)
 
 ---
 
-## 🏗️ Proje Yapısı
+##  Proje Yapısı
 
 ```
 Game_project/
@@ -67,7 +67,7 @@ Game_project/
 
 ---
 
-## 🎯 Oynanış
+##  Oynanış
 
 ### Savaş Sistemi
 1. Oyun sıra tabanlıdır - önce oyuncu, sonra rakip oynar
@@ -88,7 +88,7 @@ Game_project/
 
 ---
 
-## 🔧 Teknik Detaylar
+## Teknik Detaylar
 
 ### Gereksinimler
 - Unity 2021.3 LTS veya üzeri
@@ -113,7 +113,7 @@ Game_project/
 
 ---
 
-## 🎨 Aksiyon Tablosu
+##  Aksiyon Tablosu
 
 ### Oyuncu Aksiyonları
 | Aksiyon | Hasar | Enerji | Özel Etki |
@@ -133,7 +133,7 @@ Game_project/
 
 ---
 
-## 🤖 Kural Tabanlı AI Açıklaması
+##  Kural Tabanlı AI Açıklaması
 
 Rakip karakterin yapay zekası aşağıdaki kurallara göre çalışır:
 
@@ -147,13 +147,13 @@ AI, %20 rastgelelik faktörü ile öngörülemez kalır.
 
 ---
 
-## 📝 Lisans
+##  Lisans
 
 Bu proje eğitim amaçlı geliştirilmiştir.
 
 ---
 
-## 👤 Geliştirici
+##  Geliştirici
 
 **Oxhi1**
 - GitHub: [@Oxhi1](https://github.com/Oxhi1)
@@ -161,7 +161,7 @@ Bu proje eğitim amaçlı geliştirilmiştir.
 
 ---
 
-## 🔮 Gelecek Geliştirmeler
+##  Gelecek Geliştirmeler
 
 - [ ] Görsel karakter sprite'ları
 - [ ] Ses efektleri ve müzik ekleme
